@@ -1,0 +1,99 @@
+/* Reset dasar */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Efek kembang api */
+#fireworks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    background: #000;
+    overflow: hidden;
+}
+
+/* Konten ucapan */
+.content {
+    position: absolute;
+    z-index: 1;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    max-width: 700px;
+    margin: 0 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffcc70;
+    cursor: pointer;
+    animation: pulse 1.5s infinite;
+}
+
+h1:hover {
+    color: #ffa07a;
+}
+
+p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+footer {
+    margin-top: 20px;
+    font-style: italic;
+    color: #aaa;
+}
+
+/* Efek klik pada judul */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .content {
+        max-width: 90%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        max-width: 95%;
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+}
